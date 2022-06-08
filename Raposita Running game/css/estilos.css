@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 12px solid rgb(0, 0, 0);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(119, 119, 119);
+}
+
+.spike{
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    animation: spike-animation 1.5s infinite linear; 
+}
+
+.raposa{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.fundo{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.terra{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 500px);
+    background-color: rgb(63, 63, 63);
+    text-align: center;
+}
+
+#morreu{
+    color: red;
+    font-size: 32px;
+}
+
+@keyframes spike-animation {
+    from{
+        right: -180px;
+    }
+
+    to{
+        right: 100%;
+    } 
+}
+
+@keyframes jump {
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 210px;
+    }
+
+    50%{
+        bottom: 210px;
+    }
+
+    60%{
+        bottom: 210px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+    
+}
+
+.container{
+    width: 60%;
+    height: 250px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+}
+
+.container h1{
+    color: rgb(231, 130, 46);
+    font-size: 52px;
+}
+
+.container a{
+    position: absolute;
+    bottom: 14%;
+    left: 45.5%;
+    border: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: rgb(7, 248, 27);
+    background-color: rgba(59, 59, 59, 0.89);
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.container input{
+    position: absolute;
+    bottom: 0;
+    left: 44%;
+    border: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: rgb(7, 248, 27);
+    background-color: rgba(59, 59, 59, 0.89);
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container a:hover{
+    background-color: rgb(39, 38, 38);
+}
+
+.container input:hover{
+    background-color: rgb(39, 38, 38);
+}
+
+.raposa_correndo{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.raposa_correndo img{
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    animation: corrida 3s infinite linear;
+}
+
+@keyframes corrida {
+    from{
+        left: -180px;
+    }
+
+    to{
+        left: 100%;
+    }
+}
